@@ -1,0 +1,14 @@
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.log
+.env
+.env.*
+Preferences/
+Saves/
+BepInEx/config/
+BepInEx/cache/
+BepInEx/LogOutput.log

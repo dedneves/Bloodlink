@@ -1,0 +1,17 @@
+Bloodlink Relay dependencies
+
+Unity Transport 1.3.4
+Copyright 2018 Unity Technologies
+Unity Companion License for Unity-dependent projects: https://unity3d.com/legal/licenses/unity_companion_license
+
+Unity Services Relay 1.2.0
+Copyright 2022 Unity Technologies
+Unity Terms of Service: https://unity.com/legal
+
+Unity Services Authentication 2.7.4
+Copyright 2021 Unity Technologies
+Unity Terms of Service: https://unity.com/legal
+
+Unity Services QoS 1.3.2
+Copyright 2022 Unity Technologies
+Unity Terms of Service: https://unity.com/legal

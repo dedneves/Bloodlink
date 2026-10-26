@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <GameManagedDir Condition="'$(GameManagedDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed</GameManagedDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Networking\EnemyAnimatorParameterCodec.cs" Link="EnemyAnimatorParameterCodec.cs" />
+    <Compile Include="..\Networking\WindowedEventSequenceTracker.cs" Link="WindowedEventSequenceTracker.cs" />
+    <Compile Include="..\Networking\EnemyPresenceCodec.cs" Link="EnemyPresenceCodec.cs" />
+    <Compile Include="..\Combat\FriendlyFirePolicy.cs" Link="FriendlyFirePolicy.cs" />
+    <Compile Include="..\Networking\NetworkMessage.cs" Link="NetworkMessage.cs" />
+    <Compile Include="..\Networking\ItemStateCodec.cs" Link="ItemStateCodec.cs" />
+    <Compile Include="..\Networking\RequestReceiptJournal.cs" Link="RequestReceiptJournal.cs" />
+    <Compile Include="..\Networking\BonusPickupCodec.cs" Link="BonusPickupCodec.cs" />
+    <Compile Include="..\Combat\NativeDamageCodec.cs" Link="NativeDamageCodec.cs" />
+    <Compile Include="..\Networking\StableHierarchyPath.cs" Link="StableHierarchyPath.cs" />
+    <Compile Include="..\Levels\SceneObjectIdentity.cs" Link="SceneObjectIdentity.cs" />
+    <Compile Include="..\Networking\WorldMutationCodec.cs" Link="WorldMutationCodec.cs" />
+    <Compile Include="..\Networking\WorldAudioCodec.cs" Link="WorldAudioCodec.cs" />
+    <Compile Include="..\Networking\NetworkService.cs" Link="NetworkService.cs" />
+    <Compile Include="..\Networking\UnityRelayTransport.cs" Link="UnityRelayTransport.cs" />
+    <Compile Include="..\Networking\LevelTransitionCodec.cs" Link="LevelTransitionCodec.cs" />
+    <Compile Include="..\Networking\LevelProgressionEventCodec.cs" Link="LevelProgressionEventCodec.cs" />
+    <Compile Include="..\Networking\PlayerLifecycleCodec.cs" Link="PlayerLifecycleCodec.cs" />
+    <Compile Include="..\Networking\PlayerLifecycleStatePolicy.cs" Link="PlayerLifecycleStatePolicy.cs" />
+    <Compile Include="..\Networking\SessionHandshakeCodec.cs" Link="SessionHandshakeCodec.cs" />
+    <Compile Include="..\Networking\ReconnectReservationStore.cs" Link="ReconnectReservationStore.cs" />
+    <Compile Include="..\Networking\CheckpointEventCodec.cs" Link="CheckpointEventCodec.cs" />
+    <Compile Include="..\Networking\CheckpointSessionState.cs" Link="CheckpointSessionState.cs" />
+    <Compile Include="..\Networking\DamageRequestPolicy.cs" Link="DamageRequestPolicy.cs" />
+    <Compile Include="..\Networking\EnemyDamageStateCodec.cs" Link="EnemyDamageStateCodec.cs" />
+    <Compile Include="..\Networking\WeaponFireCodec.cs" Link="WeaponFireCodec.cs" />
+    <Compile Include="..\Networking\PlayerAnimationCodec.cs" Link="PlayerAnimationCodec.cs" />
+    <Compile Include="..\Networking\CoinProjectileCodec.cs" Link="CoinProjectileCodec.cs" />
+    <Compile Include="..\Networking\NailProjectileCodec.cs" Link="NailProjectileCodec.cs" />
+    <Compile Include="..\Networking\WeaponFireRateLimiter.cs" Link="WeaponFireRateLimiter.cs" />
+    <Compile Include="..\Networking\JoinSessionStateCodec.cs" Link="JoinSessionStateCodec.cs" />
+    <Compile Include="..\Networking\ReconnectBackoff.cs" Link="ReconnectBackoff.cs" />
+    <Compile Include="..\Networking\ReliableEventSequenceTracker.cs" Link="ReliableEventSequenceTracker.cs" />
+    <Compile Include="..\Networking\DamageRequestRateLimiter.cs" Link="DamageRequestRateLimiter.cs" />
+    <Compile Include="..\Networking\PlayerAppearanceColor.cs" Link="PlayerAppearanceColor.cs" />
+    <Compile Include="..\Networking\LatencyWindow.cs" Link="LatencyWindow.cs" />
+    <Compile Include="..\Networking\SnapshotFreshnessTracker.cs" Link="SnapshotFreshnessTracker.cs" />
+    <Compile Include="..\Networking\SnapshotTickPolicy.cs" Link="SnapshotTickPolicy.cs" />
+    <Compile Include="..\Networking\WeaponInventoryPolicy.cs" Link="WeaponInventoryPolicy.cs" />
+    <Compile Include="..\Levels\LevelReadinessBarrier.cs" Link="LevelReadinessBarrier.cs" />
+    <Compile Include="..\Levels\LevelSceneReadinessPolicy.cs" Link="LevelSceneReadinessPolicy.cs" />
+    <Compile Include="..\Networking\SceneObjectStateCodec.cs" Link="SceneObjectStateCodec.cs" />
+    <Compile Include="..\Networking\PlayerPositionCorrectionPolicy.cs" Link="PlayerPositionCorrectionPolicy.cs" />
+    <Compile Include="..\Enemies\EnemyMeleeHitLedger.cs" Link="EnemyMeleeHitLedger.cs" />
+    <Compile Include="..\Enemies\EnemyIdentityKey.cs" Link="EnemyIdentityKey.cs" />
+    <Compile Include="..\Enemies\EnemyHealthSyncPolicy.cs" Link="EnemyHealthSyncPolicy.cs" />
+    <Compile Include="..\Enemies\EnemyMatchPolicy.cs" Link="EnemyMatchPolicy.cs" />
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(GameManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(GameManagedDir)\Assembly-CSharp.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule"><HintPath>$(GameManagedDir)\UnityEngine.SharedInternalsModule.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(GameManagedDir)\UnityEngine.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Collections"><HintPath>$(GameManagedDir)\Unity.Collections.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Burst"><HintPath>$(GameManagedDir)\Unity.Burst.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Mathematics"><HintPath>$(GameManagedDir)\Unity.Mathematics.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Services.Core"><HintPath>$(GameManagedDir)\Unity.Services.Core.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Services.Core.Internal"><HintPath>$(GameManagedDir)\Unity.Services.Core.Internal.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Services.Core.Configuration"><HintPath>$(GameManagedDir)\Unity.Services.Core.Configuration.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Networking.Transport"><HintPath>..\Dependencies\Unity.Networking.Transport.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Services.Authentication"><HintPath>..\Dependencies\Unity.Services.Authentication.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Services.QoS"><HintPath>..\Dependencies\Unity.Services.QoS.dll</HintPath><Private>true</Private></Reference>
+    <Reference Include="Unity.Services.Relay"><HintPath>..\Dependencies\Unity.Services.Relay.dll</HintPath><Private>true</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LiteNetLib" Version="2.1.4" />
+  </ItemGroup>
+</Project>
+
+
